@@ -1,3 +1,5 @@
 models/
 .idea/
 venv/
+trainingData/
+validation/
