@@ -1,0 +1,35 @@
+<!doctype html>
+<title>Image Classification</title>
+<head>
+
+</head>
+
+<div style="text-align: center;">
+    {% if filename %}
+    <h1>Image</h1>
+    
+    {% else %}
+    <h1>Select a file to upload</h1>
+    {% endif %}
+
+    {% if filename %}
+    {{d}}
+    <img src="data:image/jpeg;base64,{{ filename }}" alt="img_data" id="imgslot" width="300" height="300" />
+    {% endif %}
+    {% if filename %}
+    <h3>Prediction : {{result}}</h3>
+    <h4>accuracypressed:{{accuracypressed}}</h4>
+    <h4>accuracynotpressed:{{accuracynotpressed}}</h4>
+    {% endif %}
+
+    <div class="">
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <input type='file' name='file' type="image" accept="image/png, image/gif, image/jpeg" autocomplete="off"
+                required />
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>

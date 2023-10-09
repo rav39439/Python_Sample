@@ -1,0 +1,33 @@
+<!doctype html>
+<title>FLask to upload a file</title>
+<h1>Select a file to upload</h1>
+
+
+<div>
+    {% if filename %}
+    {{d}}
+    <img src="data:image/jpeg;base64,{{ filename }}" alt="img_data"  id="imgslot"/>
+
+
+    {% endif %}
+
+        {% if filename %}
+    <h3>{{result}}</h3>
+    {% endif %}
+
+<div class="">
+    <mat-icon class="text-primary" svgIcon="heroicons_outline:arrow-circle-down"></mat-icon>
+
+
+      <form method="POST" action="/" enctype="multipart/form-data">
+
+    <input type='file' name='file' autocomplete="off" required />
+
+          <input type="submit" value="submit">
+    </form>
+    </div>
+    </div>
+
+<br>
+<br>
+<br>
